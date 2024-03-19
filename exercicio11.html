@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Exercício 11 - JS</title>
+</head>
+
+<body>
+    <script>
+        // 11 - Uma micro calculadora
+        // Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação).
+        //O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos. 
+
+        var valor1 = parseInt(prompt("Digite o primeiro valor inteiro:"));
+        var valor2 = parseInt(prompt("Digite o segundo valor inteiro:"));
+        var operacao = parseInt(prompt("Selecione a operação a ser realizada:\n" +
+            "1. Adição\n" +
+            "2. Subtração\n" +
+            "3. Divisão\n" +
+            "4. Multiplicação"));
+
+        var resultado;
+
+        switch (operacao) {
+            case 1:
+                resultado = valor1 + valor2;
+                alert("O resultado da adição é: " + resultado);
+                break;
+            case 2:
+                resultado = valor1 - valor2;
+                alert("O resultado da subtração é: " + resultado);
+                break;
+            case 3:
+                resultado = valor1 / valor2;
+                alert("O resultado da divisão é: " + resultado);
+                break;
+            case 4:
+                resultado = valor1 * valor2;
+                alert("O resultado da multiplicação é: " + resultado);
+                break;
+            default:
+                alert("Operação inválida. Por favor, selecione uma das opções válidas.");
+        }
+    </script>
+</body>
+
+</html>

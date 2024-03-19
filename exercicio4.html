@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Exercício 4 - JS</title>
+</head>
+
+<body>
+    <script>
+        // 4 -  Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.  
+
+        var n1 = parseInt(prompt("Digite o primeiro valor"));
+        var n2 = parseInt(prompt("Digite o segundo valor"));
+        var n3 = parseInt(prompt("Digite o terceiro valor"));
+
+        if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+            alert("Por favor, insira números válidos.");
+        } else {
+
+            // N1 e N2 maiores ou N1 e N3 maiores
+            if (n1 > n2 && n1 > n3) {
+                if (n2 > n3) {
+                    soma = n1 + n2
+                } else {
+                    soma = n1 + n3
+                }
+            }
+
+            // N2 e N1 maiores ou N2 e N3 maiores
+            else if (n2 > n1 && n2 > n3) {
+                if (n1 > n3) {
+                    soma = n2 + n1
+                } else {
+                    soma = n2 + n3
+                }
+            }
+
+            // N3 e N1 maiores ou N3 e N2 maiores
+            else if (n3 > n1 && n3 > n2) {
+                if (n1 > n2) {
+                    soma = n3 + n1
+                } else {
+                    soma = n3 + n2
+                }
+            }
+
+            alert("A soma é " + soma)
+        }
+    </script>
+</body>
+
+</html>
